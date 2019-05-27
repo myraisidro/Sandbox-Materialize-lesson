@@ -130,46 +130,49 @@
     <!-- START HERE -->
     <form>
       <!-- TEXT FIELD -->
-      <div>
-        <input placeholder="Name" id="name" type="text">
+      <div class="input-field">
+        <input id="name" type="text">
         <label for="name">Name</label>
       </div>
 
       <!-- VALUE & DISABLED -->
-      <div>
-        <input placeholder="Email" id="email" type="email">
+      <div class="input-field">
+        <input disabled placeholder="Email" id="email" type="email">
         <label for="email">Email</label>
       </div>
 
       <!-- TEXTAREA -->
-      <div>
-        <textarea placeholder="Message" id="message"></textarea>
+      <div class="input-field">
+        <textarea class="materialize-textarea" placeholder="Message" id="message"></textarea>
         <label for="message">Message</label>
       </div>
 
       <!-- INLINE FIELD -->
       Number of users:
-      <div>
+      <div class="input-field inline">
         <input id="users" type="text">
-        <label for="users">#</label>
+        <label for="users">Cellphone Number</label>
       </div>
 
       <!-- ICON PREFIX -->
-      <div>
+      <div class="input-field">
+        <i class="material-icons prefix tiny ">phone</i>
         <input id="phone" type="tel">
         <label for="phone">Phone Number</label>
       </div>
 
       <!-- VALIDATION & ERROR -->
-      <div>
-        <input placeholder="Email" id="email" type="email">
-        <label for="email">Email</label>
+      <div class="input-field">
+        <input placeholder="Email" id="email" type="email" class="validate">
+        <label data-error="Mali ka dyan kapatid" data-success="Nays ok na yan" for="email">Email</label>
       </div>
 
       <!-- SELECT (Must be initialized) -->
-      <div>
+      <div class="input-field">
         <select>
-
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
         </select>
         <label>Select List</label>
       </div>
@@ -177,30 +180,61 @@
       <!-- OPTION GROUPS -->
       <div>
         <select>
-
+          <optgroup label="Option Group 1">
+            <option value="">Option 1</option>
+            <option value="">Option 2</option>
+            <option value="">Option 3</option>
+          </optgroup>
+          <optgroup label="Option Group 2">
+            <option value="">Option 4</option>
+            <option value="">Option 5</option>
+            <option value="">Option 6</option>
+          </optgroup>
         </select>
         <label>Multiple Select</label>
       </div>
 
       <!-- MULTIPLE SELECT -->
-      <div>
-        <select>
-
+      <div class="input-field ">
+        <select multiple>
+          <option value="" disabled selected>Select Option</option>
+          <option value="">Option 1</option>
+          <option value="">Option 2</option>
+          <option value="">Option 3</option>
         </select>
         <label>Multiple Select</label>
       </div>
 
       <!-- RADIO BUTTONS -->
 
+      <p>
+        <input type="radio" name="gender" id="male" checked>
+        <label for="male">Male</label>
+      </p>
+      <p>
+        <input type="radio" name="gender" id="female" checked>
+        <label for="female">Female</label>
+      </p>
       <br>
       <br>
 
       <!-- CHECKBOXES -->
-
+      <p>
+          <input type="checkbox" name="tbgender" id="html">
+          <label for="html">HTML</label>
+        </p>
+        <p>
+          <input disabled type="checkbox" name="tbgender" id=css >
+          <label for="css">CSS</label>
+        </p>
+      <p>
+          <input type="checkbox" name="tbgender" id="js" >
+          <label for="js">JS</label>
+        </p>
 
       <br>
       <br>
-      <div>
+      <div class="input-field ">
         <input type="submit" value="Submit" class="btn">
       </div>
     </form>
@@ -229,8 +263,10 @@
       });
 
       // JAVASCRIPT START HERE //
+      // document.querySelector('select').addEventListener('DOMContentLoaded', () => Materialize.material_select());
 
 
+      $('select').material_select();
 
 
     });

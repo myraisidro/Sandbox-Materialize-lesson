@@ -129,10 +129,10 @@
 
   <!-- STANDARD MENU -->
   <nav>
-    <div>
-      <div>
-        <a href="#">Logo</a>
-        <ul>
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo center">Logo</a>
+        <ul class="right hide-on-small-and-down">
           <li>
             <a href="#">Home</a>
           </li>
@@ -150,83 +150,46 @@
   <br>
   <br>
 
-  <!-- RESPONSIVE WITH SIDE MENU -->
-  <nav>
-    <div>
-      <div>
-        <a href="#">Logo</a>
-        <a href="#">
-          <i></i>
-        </a>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
 
-          <!-- DROPDOWN TRIGGER -->
-          <li>
-            <a href="#!">Dropdown
-              <i></i>
-            </a>
-          </li>
-          <!-- BUTTON LINK -->
-          <li>
-            <a>Login</a>
-          </li>
-          <!-- ICON LINK -->
-          <li>
-            <a href="#">
-              <i>p</i>
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- DROPDOWN MENU -->
-  <ul>
-    <li>
-      <a href="#">Link 1</a>
-    </li>
-    <li>
-      <a href="#">Link 2</a>
-    </li>
-    <li>
-      <a href="#">Link 3</a>
-    </li>
-  </ul>
-
-  <br>
-  <br>
 
   <!-- FIXED NAVBAR -->
-  <div>
+  <div class="navbar-fixed">
+    <nav class="black">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#!" class="brand-logo center">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-small-and-down">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
 
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
 
   <br>
   <br>
 
   <!-- SEARCH BAR -->
-
+<nav class="green">
+  <div class="nav-wrapper">
+    <form>
+      <div class="input-field"><label for="search" class="label-icon"><i class="material-icons">search</i></label>
+        <input type="search" id="search" required>
+        
+        <i class="material-icons">close</i>
+      </div>
+    </form>
+  </div>
+</nav>
 
 
   <!-- END HERE -->
@@ -249,7 +212,7 @@
       // JAVASCRIPT START HERE //
 
 
-
+      $('button-collapse').sideNav();
 
     });
   </script>

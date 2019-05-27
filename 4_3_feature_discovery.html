@@ -49,7 +49,7 @@
         </ul>
       </div>
       <div class="col s3">
-        <a class='dropdown-button btn btn-large green' href='#' data-activates='css2'>CSS 2</a>
+        <a id="menu2" class='dropdown-button btn btn-large green' href='#' data-activates='css2'>CSS 2</a>
         <ul id='css2' class='dropdown-content'>
           <li>
             <a href="3_1_cards.html">Cards</a>
@@ -75,7 +75,7 @@
         </ul>
       </div>
       <div class="col s3">
-        <a class='dropdown-button btn btn-large yellow black-text' href='#' data-activates='js1'>JS 1</a>
+        <a id="menu" class='dropdown-button btn btn-large yellow black-text' href='#' data-activates='js1'>JS 1</a>
         <ul id='js1' class='dropdown-content'>
           <li>
             <a href="4_1_carousel.html">Carousel</a>
@@ -125,27 +125,37 @@
     <!-- START HERE -->
 
     <!-- FEATURE DISCOVERY -->
-    <a>Open Tap Target</a>
-    <a>Close Tap Target</a>
+    <a class="waves-effect waves-light btn" onclick="$('#target1').tapTarget('open')">Open Tap Target</a>
+    <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('close')">Close Tap Target</a>
 
-    <div>
-      <a>
-        <i></i>
+    <!-- <div class="fixed-action-btn">
+      <a id="menu" class="btn btn-floating btn-large cyan">
+        <i class="material-icons">add</i>
       </a>
-    </div>
+    </div> -->
+    <a>Nyay</a>
 
-    <div>
-      <div>
-        <div>
-          <h5>Hello World</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident cupiditate dolores. Impedit cum asperiores
-            a aspernatur ullam esse id!</p>
+    <div class="tap-target-wrapper" onclick="$('#target2').tapTarget('open')">
+      <div id="target1" class="tap-target blue" data-activates="menu">
+        <div class="tap-target-content white-text">
+          <h5>New Feature</h5>
+          <p>Click this button to add a note!</p>
+          <a class="btn next" onclick="$('#target2').tapTarget('open')">NEXT</a>
         </div>
       </div>
-      <div>
-        <a>
-          <i></i>
+      <!-- <div class="tap-target-wave">
+        <a class="btn btn-floating btn-large red tap-target-origin">
+            <i class="material-icons">add</i>
         </a>
+      </div> -->
+    </div>
+    <div class="tap-target-wrapper">
+      <div id="target2" class="tap-target blue" data-activates="menu2">
+        <div class="tap-target-content white-text">
+          <h5>2nd Feature</h5>
+          <p>Click this button to add a note!</p>
+          <a class="btn next" onclick="$('#target1').tapTarget('open')">PREVIOUS</a>
+        </div>
       </div>
     </div>
 
@@ -172,7 +182,10 @@
       });
 
       // JAVASCRIPT START HERE //
-
+      $('#target1').tapTarget({
+        onOpen: function () { console.log('Open')},
+        onClose: function () { console.log('Close')},
+      })
 
 
 

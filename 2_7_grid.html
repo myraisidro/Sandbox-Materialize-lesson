@@ -128,22 +128,52 @@
     <!-- START HERE -->
 
     <!-- 12 1 COLUMNS -->
-
+    <div class="row">
+      <div class="col s1"><div class="box grey lighten-2 center-align">1</div></div>
+      <div class="col s1"><div class="box grey lighten-2 center-align">2</div></div>
+      <div class="col s1"><div class="box grey lighten-2 center-align">3</div></div>
+      <div class="col s1"><div class="box grey lighten-2 center-align">4</div></div>
+      <div class="col s1"><div class="box grey lighten-2 center-align">5</div></div>
+      <div class="col s1"><div class="box grey lighten-2 center-align">6</div></div>
+      <div class="col s1"><div class="box grey lighten-2 center-align">7</div></div>
+      <div class="col s1"><div class="box grey lighten-2 center-align">8</div></div>
+      <div class="col s1"><div class="box grey lighten-2 center-align">9</div></div>
+      <div class="col s1"><div class="box grey lighten-2 center-align">10</div></div>
+      <div class="col s1"><div class="box grey lighten-2 center-align">11</div></div>
+      <div class="col s1"><div class="box grey lighten-2 center-align">12</div></div>
+    </div>
 
     <!-- 3 4 COLUMNS -->
-
+    <div class="row">
+        <div class="col s4"><div class="box grey lighten-2 center-align">1</div></div>
+        <div class="col s4"><div class="box grey lighten-2 center-align">2</div></div>
+        <div class="col s4"><div class="box grey lighten-2 center-align">3</div></div>
+    </div>
+   
 
     <!-- 2 6 COLUMNS -->
 
-
+    <div class="row">
+        <div class="col s6"><div class="box grey lighten-2 center-align">1</div></div>
+        <div class="col s6"><div class="box grey lighten-2 center-align">2</div></div>
+    </div>
+    
     <!-- 8 & 4 COLUMNS -->
-
+    <div class="row">
+        <div class="col s8"><div class="box grey lighten-2 center-align">1</div></div>
+        <div class="col s4"><div class="box grey lighten-2 center-align">2</div></div>
+    </div>
 
     <!-- RESPONSIVE GRIDS / SPECIFIC SCREEN SIZES -->
 
 
     <!-- PUSH & PULL -->
-
+<div class="row">
+  <div class="col s7 push-s5"><div class="box grey lighten-2 center-align">1</div></div>
+</div>
+<div class="row">
+  <div class="col s5 pull-s7"><div class="box grey lighten-2 center-align">2</div></div>
+</div>
 
     <!-- OFFSETS -->
 
@@ -161,6 +191,15 @@
   <script type="text/javascript" src="js/materialize.min.js"></script>
 
   <script>
+    
+    document.querySelector('body').addEventListener('mouseover', function(e){
+        if(e.target.classList == 'box grey lighten-2 center-align'){
+          alert('You died');
+        }
+       
+
+        e.preventDefault();
+      });
     $(document).ready(function () {
       $('.dropdown-button').dropdown({
         constrainWidth: false,
@@ -170,7 +209,6 @@
       });
 
       // JAVASCRIPT START HERE //
-
 
 
 
