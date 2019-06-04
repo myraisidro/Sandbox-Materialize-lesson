@@ -127,44 +127,43 @@
     <div class="row">
       <div class="col s12 m6">
         <!-- MATERIAL BOX -->
-        <img src="">
+        <img src="img/img1.jpg" class="materialboxed" width="100%">
       </div>
       <div class="col s12 m6">
         <!-- WITH CAPTION -->
-        <img src="">
+        <img src="img/img2.jpg" class="materialboxed" width="100%" data-caption="I'am a caption">
       </div>
     </div>
 
     <!-- SLIDER -->
-    <div>
-      <ul>
+    <div class="slider">
+      <ul class="slides">
         <li>
-          <img src="">
+          <img src="img/img4.jpg">
           <!-- CENTER ALIGN CAPTION -->
-          <div>
+          <div class="caption center-align white-text">
             <h3>Center Caption</h3>
             <h5>Lorem ipsum dolor sit amet.</h5>
           </div>
         </li>
         <li>
-          <img src="">
+          <img src="img/img5.jpg">
           <!-- LEFT ALIGN CAPTION -->
-          <div>
+          <div class="caption left-align white-text">
             <h3>Left Aligned Caption</h3>
             <h5>Here's our small slogan.</h5>
           </div>
         </li>
         <li>
-          <img src="">
+          <img src="img/img6.jpg">
           <!-- RIGHT ALIGN CAPTION -->
-          <div>
+          <div class="caption right-align white-text">
             <h3>Right Aligned Caption</h3>
             <h5>Here's our small slogan.</h5>
           </div>
         </li>
       </ul>
     </div>
-
 
     <!-- END HERE -->
 
@@ -189,6 +188,12 @@
 
       // JAVASCRIPT START HERE //
 
+      $('.slider').slider({
+        indicators: false,
+        height: 400,
+        transition: 500,
+        interval: 2000
+      });
 
 
 
